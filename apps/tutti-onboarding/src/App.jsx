@@ -4,12 +4,12 @@ import { Trans, useTranslation } from "react-i18next";
 import i18n from "./i18n";
 import { useAppLocale } from "./i18n/app-context";
 
-const agentTabs = [
-  { label: "Claude Code", image: "/assets/bind-claude.webp", altKey: "t_s1a" },
-  { label: "Codex", image: "/assets/bind-codex.webp", altKey: "t_s1b" },
-  { label: "Hermes Agent", soon: true },
-  { label: "OpenClaw", soon: true },
-  { label: "Gemini", soon: true },
+// §1 display-only agent lineup: icons + names, no tab switching. All supported today.
+const supportedAgents = [
+  { label: "Claude Code", icon: "/assets/agent-claude.svg" },
+  { label: "Codex", icon: "/assets/agent-codex.svg" },
+  { label: "Cursor", icon: "/assets/agent-cursor.svg" },
+  { label: "OpenCode", icon: "/assets/agent-opencode.svg" },
 ];
 
 const atTabs = [
@@ -60,6 +60,7 @@ const sectionIcons = {
   collaboration: "/assets/icon-at.png",
   apps: "/assets/icon-toolbox.webp",
   taskControl: "/assets/icon-clipboard.webp",
+  layout: "/assets/icon-layout.svg",
 };
 
 function HtmlText({ as: Tag = "p", className, i18nKey }) {
@@ -265,6 +266,31 @@ function SectionTabs({ active, items, onChange }) {
       }))}
       onChange={onChange}
     />
+  );
+}
+
+function AgentShowcase({ onOpen }) {
+  return (
+    <div className="agent-showcase">
+      <ul className="agent-lineup">
+        {supportedAgents.map((agent) => (
+          <li className="agent-lineup-item" key={agent.label}>
+            <img
+              alt=""
+              aria-hidden="true"
+              className="agent-lineup-ico"
+              src={agent.icon}
+            />
+            <b>{agent.label}</b>
+          </li>
+        ))}
+      </ul>
+      <ShotImage
+        altKey="t_agentsdemo"
+        onOpen={onOpen}
+        src="/assets/agents-multi.svg"
+      />
+    </div>
   );
 }
 
@@ -553,6 +579,12 @@ export default function App() {
       labelKey: "t_n4",
       tone: "var(--accent-claude)",
     },
+    {
+      id: "s5",
+      icon: sectionIcons.layout,
+      labelKey: "t_n5",
+      tone: "var(--accent-codex)",
+    },
   ];
 
   return (
@@ -603,7 +635,7 @@ export default function App() {
             <h2>{t("t_h1")}</h2>
           </div>
           <HtmlText className="sec-intro" i18nKey="t_i1" />
-          <Tabs items={agentTabs} onOpen={openLightbox} variant="segment" />
+          <AgentShowcase onOpen={openLightbox} />
           <div className="btns">
             <ActionButton
               action="agent-connect"
@@ -711,6 +743,27 @@ export default function App() {
               {t("t_bg4b")}
             </ActionButton>
           </div>
+        </section>
+
+        {/* §5 custom window layout */}
+        <section
+          className="sec"
+          id="s5"
+          style={{
+            "--tone": "var(--accent-codex)",
+            "--tone-fg": "var(--white-stationary)",
+          }}
+        >
+          <div className="sec-h">
+            <IconImage className="sec-ico" src={sectionIcons.layout} />
+            <h2>{t("t_h5")}</h2>
+          </div>
+          <HtmlText className="sec-intro" i18nKey="t_h5_desc" />
+          <ShotImage
+            altKey="t_h5_img"
+            onOpen={openLightbox}
+            src="/assets/layout-custom.svg"
+          />
         </section>
 
         <footer className="end">
