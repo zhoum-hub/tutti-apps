@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Multi-agent demo placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2030"/>
+      <stop offset="1" stop-color="#12151f"/>
+    </linearGradient>
+    <style>
+      .lbl{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#e8ecf7;}
+      .sub{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#8b94ad;}
+    </style>
+  </defs>
+  <rect width="880" height="460" rx="18" fill="url(#bg)"/>
+
+  <!-- center hub -->
+  <circle cx="440" cy="230" r="46" fill="#2b3350" stroke="#6D7FF5" stroke-width="2"/>
+  <text x="440" y="243" text-anchor="middle" font-size="34" font-family="-apple-system,sans-serif" fill="#aeb8ff" font-weight="700">@</text>
+
+  <!-- links -->
+  <g stroke="#4a557a" stroke-width="2" stroke-dasharray="5 6">
+    <line x1="235" y1="150" x2="405" y2="212"/>
+    <line x1="645" y1="150" x2="475" y2="212"/>
+    <line x1="235" y1="330" x2="405" y2="250"/>
+    <line x1="645" y1="330" x2="475" y2="250"/>
+  </g>
+
+  <!-- Claude -->
+  <g>
+    <rect x="70" y="100" width="200" height="96" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+    <rect x="86" y="118" width="26" height="26" rx="7" fill="#D97757"/>
+    <text x="124" y="130" font-size="15" class="lbl" font-weight="600">Claude Code</text>
+    <text x="124" y="150" font-size="12" class="sub">reviewing diff…</text>
+    <rect x="86" y="164" width="168" height="7" rx="3.5" fill="#31394f"/>
+    <rect x="86" y="176" width="120" height="7" rx="3.5" fill="#31394f"/>
+  </g>
+
+  <!-- Codex -->
+  <g>
+    <rect x="610" y="100" width="200" height="96" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+    <rect x="626" y="118" width="26" height="26" rx="7" fill="#0A0A0A" stroke="#555" stroke-width="1"/>
+    <text x="664" y="130" font-size="15" class="lbl" font-weight="600">Codex</text>
+    <text x="664" y="150" font-size="12" class="sub">running task…</text>
+    <rect x="626" y="164" width="168" height="7" rx="3.5" fill="#31394f"/>
+    <rect x="626" y="176" width="132" height="7" rx="3.5" fill="#31394f"/>
+  </g>
+
+  <!-- Cursor -->
+  <g>
+    <rect x="70" y="284" width="200" height="96" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+    <rect x="86" y="302" width="26" height="26" rx="7" fill="#111114" stroke="#555" stroke-width="1"/>
+    <text x="124" y="314" font-size="15" class="lbl" font-weight="600">Cursor</text>
+    <text x="124" y="334" font-size="12" class="sub">editing files…</text>
+    <rect x="86" y="348" width="168" height="7" rx="3.5" fill="#31394f"/>
+    <rect x="86" y="360" width="104" height="7" rx="3.5" fill="#31394f"/>
+  </g>
+
+  <!-- OpenCode -->
+  <g>
+    <rect x="610" y="284" width="200" height="96" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+    <rect x="626" y="302" width="26" height="26" rx="7" fill="#6D7FF5"/>
+    <text x="664" y="314" font-size="15" class="lbl" font-weight="600">OpenCode</text>
+    <text x="664" y="334" font-size="12" class="sub">sharing context…</text>
+    <rect x="626" y="348" width="168" height="7" rx="3.5" fill="#31394f"/>
+    <rect x="626" y="360" width="126" height="7" rx="3.5" fill="#31394f"/>
+  </g>
+
+  <!-- placeholder ribbon -->
+  <g>
+    <rect x="360" y="410" width="160" height="26" rx="13" fill="#2b3350" stroke="#4a557a" stroke-width="1"/>
+    <text x="440" y="427" text-anchor="middle" font-size="12" letter-spacing="0.5" fill="#9aa4c2" font-family="-apple-system,sans-serif">PLACEHOLDER · 占位示意</text>
+  </g>
+</svg>

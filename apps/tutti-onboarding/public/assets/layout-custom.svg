@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 460" width="880" height="460" role="img" aria-label="Custom window layout placeholder">
+  <defs>
+    <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2030"/>
+      <stop offset="1" stop-color="#12151f"/>
+    </linearGradient>
+    <style>
+      .wt{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#c7cfe6;}
+    </style>
+  </defs>
+  <rect width="880" height="460" rx="18" fill="url(#lbg)"/>
+
+  <!-- top chrome bar -->
+  <rect x="0" y="0" width="880" height="52" rx="18" fill="#181d2b"/>
+  <rect x="0" y="34" width="880" height="18" fill="#181d2b"/>
+  <circle cx="28" cy="26" r="5" fill="#ef6a5f"/>
+  <circle cx="46" cy="26" r="5" fill="#f4bd4e"/>
+  <circle cx="64" cy="26" r="5" fill="#5fcf72"/>
+
+  <!-- the two top-right layout buttons (highlighted) -->
+  <g>
+    <rect x="742" y="12" width="28" height="28" rx="8" fill="#2b3350" stroke="#6D7FF5" stroke-width="1.5"/>
+    <!-- activate / overview: corner brackets -->
+    <g stroke="#aeb8ff" stroke-width="2" stroke-linecap="round" fill="none">
+      <path d="M750 20 v-2 h2"/><path d="M762 18 h2 v2"/>
+      <path d="M750 32 v2 h2"/><path d="M762 34 h2 v-2"/>
+    </g>
+    <rect x="778" y="12" width="28" height="28" rx="8" fill="#2b3350" stroke="#6D7FF5" stroke-width="1.5"/>
+    <!-- layout: split window -->
+    <g stroke="#aeb8ff" stroke-width="2" fill="none">
+      <rect x="784" y="18" width="16" height="14" rx="3"/>
+      <line x1="792" y1="18" x2="792" y2="32"/>
+    </g>
+    <text x="774" y="60" text-anchor="middle" font-size="11" class="wt" opacity="0.8">Cmd/Ctrl + 1 · 2</text>
+  </g>
+
+  <!-- arranged windows -->
+  <rect x="40" y="78" width="380" height="336" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+  <rect x="40" y="78" width="380" height="30" rx="14" fill="#2a3247"/>
+  <text x="60" y="98" font-size="13" class="wt">Agent · Chat</text>
+
+  <rect x="436" y="78" width="404" height="160" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+  <rect x="436" y="78" width="404" height="30" rx="14" fill="#2a3247"/>
+  <text x="456" y="98" font-size="13" class="wt">AI Doc</text>
+
+  <rect x="436" y="254" width="404" height="160" rx="14" fill="#232a3d" stroke="#374056" stroke-width="1.5"/>
+  <rect x="436" y="254" width="404" height="30" rx="14" fill="#2a3247"/>
+  <text x="456" y="274" font-size="13" class="wt">Prototype Design</text>
+
+  <!-- placeholder ribbon -->
+  <rect x="360" y="418" width="160" height="26" rx="13" fill="#2b3350" stroke="#4a557a" stroke-width="1"/>
+  <text x="440" y="435" text-anchor="middle" font-size="12" letter-spacing="0.5" fill="#9aa4c2" font-family="-apple-system,sans-serif">PLACEHOLDER · 占位示意</text>
+</svg>

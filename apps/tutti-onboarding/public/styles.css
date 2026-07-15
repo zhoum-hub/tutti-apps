@@ -275,6 +275,14 @@ button { font: inherit; }
 /* 暂无素材的占位：保持固定高度并居中 */
 .shot-empty { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 182px; color: var(--ink3); font-size: 12px; font-weight: 500; text-align: center; }
 
+/* §1 展示型 Agent 阵容：仅展示图标 + 名称，不做切换 */
+.agent-showcase { display: flex; flex-direction: column; align-items: center; gap: 18px; margin: 4px 0 6px; }
+.agent-showcase > .shot { width: 100%; }
+.agent-lineup { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 12px; margin: 0; padding: 0; list-style: none; }
+.agent-lineup-item { display: inline-flex; align-items: center; gap: 9px; padding: 8px 16px 8px 9px; border: 1px solid var(--border-1); border-radius: 999px; background: var(--background-fronted); box-shadow: var(--shadow-soft); }
+.agent-lineup-ico { flex-shrink: 0; width: 26px; height: 26px; border-radius: 7px; object-fit: contain; }
+.agent-lineup-item b { color: var(--ink); font-size: 13.5px; font-weight: 500; white-space: nowrap; }
+
 /* 视频：原生控制条(播放/暂停/进度条) + 中央播放按钮蒙层 */
 .shot-video video { cursor: pointer; }
 .video-play {
